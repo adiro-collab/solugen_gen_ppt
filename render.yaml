@@ -1,0 +1,16 @@
+# Render Blueprint — static site.
+# https://render.com/docs/blueprint-spec
+#
+# The build step just copies the static files into ./build so that the
+# publish directory Render pre-fills ("build") works out of the box.
+services:
+  - type: web
+    name: solugen-presentation
+    runtime: static
+    buildCommand: "rm -rf build && mkdir build && cp index.html build/ && cp -R assets build/"
+    staticPublishPath: build
+    pullRequestPreviewsEnabled: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
