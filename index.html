@@ -119,6 +119,7 @@
     letter-spacing:.12em;color:var(--ink-2);
     font-size:clamp(.72rem,2.1cqh,1rem);
   }
+  .s-sub--lg{font-size:clamp(.95rem,3cqh,1.4rem);letter-spacing:.04em}
   .s-body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:3cqh;min-height:0}
 
   /* ---------- reveal ---------- */
@@ -206,7 +207,8 @@
   #s1.is-active .hero .rule{width:min(420px,46cqw)}
   .hero .tagline{font-family:var(--font-head);font-weight:600;color:var(--ink);font-size:clamp(1.05rem,3.8cqh,2rem);letter-spacing:.01em;direction:ltr}
   .hero .tagline b{color:var(--teal);font-weight:800}
-  .hero .foot{font-family:var(--font-mono);color:var(--ink-3);font-size:clamp(.62rem,1.7cqh,.82rem);letter-spacing:.2em}
+  .hero .foot{display:flex;flex-direction:column;align-items:center;gap:.5em;font-family:var(--font-head);font-weight:500;color:#fff;font-size:clamp(.9rem,2.6cqh,1.25rem);letter-spacing:.04em}
+  .hero .foot .yr{font-family:var(--font-mono);font-size:.85em;letter-spacing:.2em}
   @media (prefers-reduced-motion:reduce){ #s1.is-active .hero .rule{transition:none} .hero .brand img.spk{animation:none} }
 
   /* ---------- 2 : agenda ---------- */
@@ -236,7 +238,7 @@
     margin:auto;text-align:center;max-width:min(92%,960px);
     font-size:clamp(1.1rem,3.8cqh,2rem);line-height:1.7;color:var(--ink);font-weight:400;
   }
-  .about-pills{display:flex;justify-content:center;gap:1.4cqw;flex-wrap:wrap}
+  .about-pills{display:flex;justify-content:center;gap:1.4cqw;flex-wrap:wrap;margin-bottom:8cqh}
   .about-pills span{
     font-family:var(--font-head);font-weight:700;font-size:clamp(.8rem,2.3cqh,1.15rem);
     color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:.55em 1.3em;
@@ -278,15 +280,15 @@
   }
   .pillar .cta svg{width:1em;height:1em}
   .pillar:hover .cta{background:var(--teal);color:#04130e}
-  .wwd-foot{display:grid;grid-template-columns:1fr 1.25fr;gap:2.2cqw}
+  .wwd-foot{display:grid;grid-template-columns:1fr;gap:2.2cqw}
   .strip{
     background:var(--panel);border:1px solid var(--line);border-radius:12px;
     padding:1.8cqh 2cqw;display:flex;align-items:center;gap:2cqw;
   }
-  .strip .lbl{font-family:var(--font-mono);letter-spacing:.16em;color:var(--teal);font-size:clamp(.6rem,1.6cqh,.8rem);flex:none}
+  .strip .lbl{font-family:var(--font-mono);letter-spacing:.16em;color:var(--teal);font-size:clamp(.8rem,2.3cqh,1.1rem);flex:none}
   .strip .txt{color:var(--ink-2);font-size:clamp(.66rem,1.8cqh,.9rem);line-height:1.5}
   .strip .txt b{color:var(--ink);font-weight:500}
-  .partner-row{display:flex;align-items:center;justify-content:space-around;gap:1.8cqw;flex:1;direction:ltr}
+  .partner-row{display:flex;align-items:center;justify-content:center;gap:3.5cqw;flex:1;direction:ltr}
   .partner-row img{height:5.4cqh;width:auto;object-fit:contain}
   .partner-row img.badges{height:7.4cqh}
 
@@ -304,6 +306,8 @@
     opacity:.72;transition:opacity .22s ease, transform .22s ease, filter .22s ease;
   }
   .cl img.sm{max-height:55%}
+  .cl-row{grid-column:1/-1;justify-self:stretch;display:flex;justify-content:center;gap:2.6cqw}
+  .cl-row .cl{width:calc((100% - 6 * 2.6cqw) / 7)}
   .cl:hover img{opacity:1;transform:scale(1.08);filter:drop-shadow(0 0 14px rgba(22,217,168,.55))}
 
   /* ---------- 6 : products ---------- */
@@ -414,6 +418,10 @@
   .story .idx{font-size:clamp(1rem,3.2cqh,1.7rem);opacity:.5}
   .story h3{font-size:clamp(1rem,2.9cqh,1.5rem)}
   .story p{font-size:clamp(.64rem,1.72cqh,.88rem);line-height:1.55}
+  .re-grid{gap:3.2cqh 2.4cqw}
+  .re-grid .story{padding:3.8cqh 2.6cqw;gap:1.8cqh}
+  .re-grid .story h3{font-size:clamp(1.1rem,3.6cqh,1.85rem)}
+  .re-grid .story p{font-size:clamp(.78rem,2.4cqh,1.15rem);line-height:1.6}
   .narrow{max-width:min(100%,960px);margin-inline:auto;width:100%}
 
   /* ---------- 13-14 : ERP ---------- */
@@ -491,6 +499,12 @@
   .person .contact span{font-family:var(--font-mono)}
   .thanks-foot{display:block;margin:4cqh auto 0;font-family:var(--font-mono);letter-spacing:.16em;color:var(--teal);text-decoration:none;font-size:clamp(.72rem,2cqh,1rem)}
   .thanks-foot:hover{text-decoration:underline}
+  .home-btn{display:inline-flex;align-items:center;gap:.5em;margin:3cqh auto 0;align-self:center;cursor:pointer;
+    font-family:var(--font-head);font-weight:700;font-size:clamp(.8rem,2.3cqh,1.1rem);
+    color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:.55em 1.3em;transition:border-color .2s,color .2s}
+  .home-btn:hover{border-color:var(--teal);color:var(--teal)}
+  .sol-btn{margin:0 auto;flex:none}
+  .home-btn svg{width:1.1em;height:1.1em;fill:none;stroke:var(--teal);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
   /* ---------- chrome ---------- */
   .wordmark{
@@ -604,6 +618,8 @@
     .cols-2,.cols-3,.cols-5,.pillars,.verticals,.stats,.mkt,.deliv,.ops,.disc,.wwd-foot{grid-template-columns:1fr}
     .agenda{grid-template-columns:1fr}
     .client-wall{grid-template-columns:repeat(3,1fr)}
+    .cl-row{flex-wrap:wrap;row-gap:4.6cqh}
+    .cl-row .cl{width:calc((100% - 2 * 2.6cqw) / 3)}
     .cl img{max-width:24cqw}
     .caps{grid-template-columns:1fr 1fr}
     .platform{grid-template-columns:1fr}
@@ -660,8 +676,8 @@
           <img class="spk" src="assets/sparkle.png" alt="">
         </div>
         <div class="rule" data-reveal></div>
-        <div class="tagline" data-reveal>Revolutionizing Business Operations with <b>Gen AI</b></div>
-        <div class="foot" data-reveal>COMPANY OVERVIEW&nbsp;&nbsp;·&nbsp;&nbsp;2026</div>
+        <div class="tagline" data-reveal>The <b>AI</b> Solution for SMB Operations</div>
+        <div class="foot" data-reveal><span>מצגת חברה</span><span class="yr">2026</span></div>
       </div>
     </section>
 
@@ -675,7 +691,7 @@
             <button class="a-item" data-reveal data-goto="8"><span class="circle">3</span>על השוק</button>
             <button class="a-item" data-reveal data-goto="9"><span class="circle">4</span>ערך בהטמעת פתרונות Gen AI</button>
             <button class="a-item" data-reveal data-goto="10"><span class="circle">5</span>דוגמאות לתרחישים</button>
-            <button class="a-item" data-reveal data-goto="17"><span class="circle">6</span>AI Discovery</button>
+            <button class="a-item" data-reveal data-goto="19"><span class="circle">6</span>AI Discovery</button>
           </div>
           <div class="big" data-reveal>אג׳נדה</div>
         </div>
@@ -703,53 +719,8 @@
       </div>
     </section>
 
-    <!-- 4 — what we do (interactive pillars) -->
-    <section class="slide" id="s4" data-title="מה אנחנו עושים" data-section="01 · עלינו">
-      <header class="s-head s-head--tight" data-reveal>
-        <div class="eyebrow"><span class="tick"></span><span class="num">01</span> · מה אנחנו עושים</div>
-        <h2 class="s-title">מה אנחנו עושים</h2>
-      </header>
-      <div class="s-body" style="gap:2.6cqh">
-        <div class="pillars">
-          <button class="pillar" data-reveal data-goto="7">
-            <div class="p-top"><span class="p-ic"><svg class="ic"><use href="#i-tailor"/></svg></span><span class="idx">01</span></div>
-            <h3>התאמות תפורות<br>לצרכי לקוחות</h3>
-            <p>ליווי ארגונים בבניית יכולות AI — מתודולוגיית AI SDLC, ארכיטקטורה, פיתוח ייעודי והטמעה.</p>
-            <span class="cta">לשירותים שלנו <svg><use href="#i-arrow"/></svg></span>
-          </button>
-          <button class="pillar" data-reveal data-goto="6">
-            <div class="p-top"><span class="p-ic"><svg class="ic"><use href="#i-cube"/></svg></span><span class="idx">02</span></div>
-            <h3>פיתוח פתרונות<br><span class="en">Gen AI לתעשייה</span></h3>
-            <p>פתרונות מדף Vertical AI לביטוח, פיננסים ו‑ERP — על גבי פלטפורמת CoreGen™ AI.</p>
-            <span class="cta">לפתרונות שלנו <svg><use href="#i-arrow"/></svg></span>
-          </button>
-          <button class="pillar" data-reveal data-goto="17">
-            <div class="p-top"><span class="p-ic"><svg class="ic"><use href="#i-compass"/></svg></span><span class="idx">03</span></div>
-            <h3>סדנאות<br><span class="en">AI Discovery</span></h3>
-            <p>מיפוי אתגרים, זיהוי ותעדוף Use Cases ובניית מפת דרכים ליישום AI בארגון.</p>
-            <span class="cta">לפרטי הסדנה <svg><use href="#i-arrow"/></svg></span>
-          </button>
-        </div>
-        <div class="wwd-foot" data-reveal>
-          <div class="strip">
-            <span class="lbl">רקע</span>
-            <span class="txt">חלק מקבוצת חברות <b>Razor · Axon Vision · Axon Pulse · Compie Technologies</b></span>
-          </div>
-          <div class="strip">
-            <span class="lbl">שותפים</span>
-            <div class="partner-row">
-              <img class="badges" src="assets/partners/aws-badges.png" alt="AWS Partner — Premier Tier Services, Generative AI Competency">
-              <img src="assets/partners/azure.png" alt="Microsoft Azure">
-              <img src="assets/partners/google-cloud.png" alt="Google Cloud">
-              <img src="assets/partners/sap.png" alt="SAP">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5 — clients -->
-    <section class="slide" id="s5" data-title="הלקוחות שלנו" data-section="01 · עלינו">
+    <!-- 4 — clients -->
+    <section class="slide" id="s4" data-title="הלקוחות שלנו" data-section="01 · עלינו">
       <header class="s-head" data-reveal>
         <div class="eyebrow"><span class="tick"></span><span class="num">01</span> · לקוחות</div>
         <h2 class="s-title">הלקוחות שלנו</h2>
@@ -770,13 +741,60 @@
           <div class="cl"><img src="assets/clients/hadassah.png" alt="הדסה"></div>
           <div class="cl"><img src="assets/clients/maccabident.png" alt="מכבידנט"></div>
           <div class="cl"><img src="assets/clients/icl.png" alt="ICL"></div>
-          <div class="cl"><img src="assets/clients/cbc.png" alt="CBC Israel"></div>
-          <div class="cl"><img src="assets/clients/cinema-city.png" alt="סינמה סיטי"></div>
-          <div class="cl"><img src="assets/clients/taglit.png" alt="Taglit Birthright Israel"></div>
-          <div class="cl"><img src="assets/clients/eitoran.png" alt="איתוראן"></div>
-          <div class="cl"><img src="assets/clients/davidson.png" alt="מכון דוידסון"></div>
-          <div class="cl"><img src="assets/clients/shviro.png" alt="שבירו"></div>
-          <div class="cl"><img src="assets/clients/tzarfati.png" alt="צרפתי צבי ובניו"></div>
+          <div class="cl-row">
+            <div class="cl"><img src="assets/clients/cbc.png" alt="CBC Israel"></div>
+            <div class="cl"><img src="assets/clients/cinema-city.png" alt="סינמה סיטי"></div>
+            <div class="cl"><img src="assets/clients/taglit.png" alt="Taglit Birthright Israel"></div>
+            <div class="cl"><img src="assets/clients/eitoran.png" alt="איתוראן"></div>
+            <div class="cl"><img src="assets/clients/davidson.png" alt="מכון דוידסון"></div>
+          </div>
+          <div class="cl-row">
+            <div class="cl"><img src="assets/clients/shviro.png" alt="שבירו"></div>
+            <div class="cl"><img src="assets/clients/tzarfati.png" alt="צרפתי צבי ובניו"></div>
+            <div class="cl"><img src="assets/clients/dimri.png" alt="י.ח. דמרי"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 — what we do (interactive pillars) -->
+    <section class="slide" id="s5" data-title="מה אנחנו עושים" data-section="01 · עלינו">
+      <header class="s-head s-head--tight" data-reveal>
+        <div class="eyebrow"><span class="tick"></span><span class="num">01</span> · מה אנחנו עושים</div>
+        <h2 class="s-title">מה אנחנו עושים</h2>
+      </header>
+      <div class="s-body" style="gap:2.6cqh">
+        <div class="pillars">
+          <button class="pillar" data-reveal data-goto="7">
+            <div class="p-top"><span class="p-ic"><svg class="ic"><use href="#i-tailor"/></svg></span><span class="idx">01</span></div>
+            <h3>התאמות תפורות<br>לצרכי לקוחות</h3>
+            <p>ליווי ארגונים בבניית יכולות AI — מתודולוגיית AI SDLC, ארכיטקטורה, פיתוח ייעודי והטמעה.</p>
+            <span class="cta">לשירותים שלנו <svg><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="pillar" data-reveal data-goto="6">
+            <div class="p-top"><span class="p-ic"><svg class="ic"><use href="#i-cube"/></svg></span><span class="idx">02</span></div>
+            <h3>פיתוח פתרונות<br><span class="en">Gen AI לתעשייה</span></h3>
+            <p>פתרונות מדף Vertical AI לביטוח, פיננסים ו‑ERP — על גבי פלטפורמת CoreGen™ AI.</p>
+            <span class="cta">לפתרונות שלנו <svg><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="pillar" data-reveal data-goto="19">
+            <div class="p-top"><span class="p-ic"><svg class="ic"><use href="#i-compass"/></svg></span><span class="idx">03</span></div>
+            <h3>סדנאות<br><span class="en">AI Discovery</span></h3>
+            <p>מיפוי אתגרים, זיהוי ותעדוף Use Cases ובניית מפת דרכים ליישום AI בארגון.</p>
+            <span class="cta">לפרטי הסדנה <svg><use href="#i-arrow"/></svg></span>
+          </button>
+        </div>
+        <div class="wwd-foot" data-reveal>
+          <div class="strip">
+            <span class="lbl">שותפים</span>
+            <div class="partner-row">
+              <img class="badges" src="assets/partners/aws-premier.png" alt="AWS Partner — Premier Tier Services">
+              <img class="badges" src="assets/partners/aws-genai.png" alt="AWS Partner — Generative AI Competency">
+              <img src="assets/partners/azure.png" alt="Microsoft Azure">
+              <img src="assets/partners/google-cloud.png" alt="Google Cloud">
+              <img src="assets/partners/sap.png" alt="SAP">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -796,7 +814,7 @@
             <div class="chips"><span>יישוב תביעות</span><span>חיתום</span><span>מסלול ירוק / STP</span></div>
             <span class="go">לתרחישי ביטוח <svg><use href="#i-arrow"/></svg></span>
           </button>
-          <button class="vert" data-reveal data-goto="15">
+          <button class="vert" data-reveal data-goto="17">
             <div class="v-head"><svg><use href="#i-spark"/></svg><span class="v-name">Fin<span class="g">Gen</span><span class="tm">™</span> AI</span></div>
             <span class="v-sub">פתרונות AI למגזר הפיננסי</span>
             <p class="v-desc">אוטומציה של תהליכי תפעול, אשראי וניטור הונאות בבנקים ובחברות כרטיסי אשראי.</p>
@@ -1092,6 +1110,7 @@
             <div class="value"><span class="lbl">ערך עסקי</span>חיסכון בתפעול תהליכי מכירות · קיצור משך סגירת עסקאות · הורדת עומס מהמוקדים</div>
           </div>
         </div>
+        <button class="home-btn sol-btn" type="button" data-act="sol" data-reveal><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>חזרה לפתרונות המדף שלנו</button>
       </div>
     </section>
 
@@ -1135,11 +1154,78 @@
             <div class="value"><span class="lbl">ערך עסקי</span>מניעת התחייבויות יתר · ניהול Opex / Capex חכם</div>
           </div>
         </div>
+        <button class="home-btn sol-btn" type="button" data-act="sol" data-reveal><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>חזרה לפתרונות המדף שלנו</button>
       </div>
     </section>
 
-    <!-- 15 — finance: operations -->
-    <section class="slide" id="s15" data-title="תרחישים בעולמות פיננסי · תפעול" data-section="05 · תרחישים">
+    <!-- 15 — real estate scenarios 01-04 -->
+    <section class="slide" id="s15" data-title="תרחישים בעולמות הנדל״ן · 01–04" data-section="05 · תרחישים">
+      <header class="s-head" data-reveal>
+        <div class="eyebrow"><span class="tick"></span><span class="num">05</span> · <span dir="ltr">Ops<span class="g">Gen</span>™ AI</span></div>
+        <h2 class="s-title s-title--sm">תרחישים בעולמות הנדל״ן</h2>
+      </header>
+      <div class="s-body">
+        <div class="grid cols-2 re-grid">
+          <div class="card story" data-reveal>
+            <div class="top"><span class="idx">01</span><span class="tag">ידע ארגוני</span></div>
+            <h3>צ׳טבוט חכם ארגוני</h3>
+            <p>צ׳טבוט AI המחובר למידע ולמסמכים הארגוניים ומאפשר לעובדים לשאול שאלות ולקבל תשובות מתוך חוזים, מפרטים, נהלים, תוכניות, פרוטוקולים, RFIs והתכתבויות.</p>
+          </div>
+          <div class="card story" data-reveal>
+            <div class="top"><span class="idx">02</span><span class="tag">כספים</span></div>
+            <h3>בקרת חשבונות קבלנים וספקים</h3>
+            <p>קריאת חשבונות, השוואה לחוזה/הזמנה/כתב כמויות, זיהוי חריגות והכנת המלצה לאישור תשלום.</p>
+          </div>
+          <div class="card story" data-reveal>
+            <div class="top"><span class="idx">03</span><span class="tag">תקציב</span></div>
+            <h3>בקרת תקציב וחריגות פרויקט</h3>
+            <p>תקציב מול ביצוע, התחייבויות פתוחות, תחזית לסיום והתרעות מוקדמות על חריגה צפויה.</p>
+          </div>
+          <div class="card story" data-reveal>
+            <div class="top"><span class="idx">04</span><span class="tag">רכש</span></div>
+            <h3>ניהול רכש והשוואת הצעות</h3>
+            <p>הפקת RFQ, קליטת הצעות, השוואה אוטומטית בין ספקים וקבלנים והמלצה מסחרית.</p>
+          </div>
+        </div>
+        <button class="home-btn sol-btn" type="button" data-act="sol" data-reveal><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>חזרה לפתרונות המדף שלנו</button>
+      </div>
+    </section>
+
+    <!-- 16 — real estate scenarios 05-08 -->
+    <section class="slide" id="s16" data-title="תרחישים בעולמות הנדל״ן · 05–08" data-section="05 · תרחישים">
+      <header class="s-head" data-reveal>
+        <div class="eyebrow"><span class="tick"></span><span class="num">05</span> · <span dir="ltr">Ops<span class="g">Gen</span>™ AI</span></div>
+        <h2 class="s-title s-title--sm">תרחישים בעולמות הנדל״ן</h2>
+      </header>
+      <div class="s-body">
+        <div class="grid cols-2 re-grid">
+          <div class="card story" data-reveal>
+            <div class="top"><span class="idx">05</span><span class="tag">חוזים</span></div>
+            <h3>ניהול חוזים והתחייבויות</h3>
+            <p>חילוץ אבני דרך, ערבויות, ביטוחים, תנאי תשלום, קנסות, הצמדות ומועדים קריטיים.</p>
+          </div>
+          <div class="card story" data-reveal>
+            <div class="top"><span class="idx">06</span><span class="tag">חוזים</span></div>
+            <h3>בקרת שינויים ותוספות עבודה</h3>
+            <p>ניתוח דרישות לתוספות ו‑Change Orders מול ההסכם המקורי והערכת ההשפעה הכספית.</p>
+          </div>
+          <div class="card story" data-reveal>
+            <div class="top"><span class="idx">07</span><span class="tag">לו״ז</span></div>
+            <h3>בקרת לו״ז והתרעות על עיכובים</h3>
+            <p>זיהוי משימות בסיכון, השפעה על Critical Path וחיזוי איחור לפני שהוא מתרחש.</p>
+          </div>
+          <div class="card story" data-reveal>
+            <div class="top"><span class="idx">08</span><span class="tag">בקרה</span></div>
+            <h3>מניעת טעויות והונאות בתשלומים</h3>
+            <p>זיהוי חשבוניות כפולות, חריגות בכמויות, שינויי פרטי ספק ודפוסי תשלום חשודים.</p>
+          </div>
+        </div>
+        <button class="home-btn sol-btn" type="button" data-act="sol" data-reveal><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>חזרה לפתרונות המדף שלנו</button>
+      </div>
+    </section>
+
+    <!-- 17 — finance: operations -->
+    <section class="slide" id="s17" data-title="תרחישים בעולמות פיננסי · תפעול" data-section="05 · תרחישים">
       <header class="s-head" data-reveal>
         <div class="eyebrow"><span class="tick"></span><span class="num">05</span> · <span dir="ltr">Fin<span class="g">Gen</span>™ AI</span></div>
         <h2 class="s-title s-title--sm">תרחישים בעולמות פיננסי · תפעול</h2>
@@ -1171,11 +1257,12 @@
             </div>
           </div>
         </div>
+        <button class="home-btn sol-btn" type="button" data-act="sol" data-reveal><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>חזרה לפתרונות המדף שלנו</button>
       </div>
     </section>
 
-    <!-- 16 — finance: credit -->
-    <section class="slide" id="s16" data-title="תרחישים בעולמות פיננסי · אשראי" data-section="05 · תרחישים">
+    <!-- 18 — finance: credit -->
+    <section class="slide" id="s18" data-title="תרחישים בעולמות פיננסי · אשראי" data-section="05 · תרחישים">
       <header class="s-head" data-reveal>
         <div class="eyebrow"><span class="tick"></span><span class="num">05</span> · <span dir="ltr">Fin<span class="g">Gen</span>™ AI</span></div>
         <h2 class="s-title s-title--sm">תרחישים בעולמות פיננסי · אשראי</h2>
@@ -1237,14 +1324,16 @@
             </ul>
           </div>
         </div>
+        <button class="home-btn sol-btn" type="button" data-act="sol" data-reveal><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>חזרה לפתרונות המדף שלנו</button>
       </div>
     </section>
 
-    <!-- 17 — AI discovery workshop -->
-    <section class="slide" id="s17" data-title="סדנת AI Discovery" data-section="06 · AI Discovery">
+    <!-- 19 — AI discovery workshop -->
+    <section class="slide" id="s19" data-title="סדנת AI Discovery" data-section="06 · AI Discovery">
       <header class="s-head" data-reveal>
         <div class="eyebrow"><span class="tick"></span><span class="num">06</span> · AI Discovery</div>
         <h2 class="s-title">סדנת AI Discovery</h2>
+        <p class="s-sub s-sub--lg">המטרה: זיהוי תרחישי AI המתאימים לתפעול וייעול תהליכים</p>
       </header>
       <div class="s-body">
         <div class="disc">
@@ -1271,8 +1360,8 @@
       </div>
     </section>
 
-    <!-- 18 — AI discovery deliverables -->
-    <section class="slide" id="s18" data-title="תוצרי סדנת AI Discovery" data-section="06 · AI Discovery">
+    <!-- 20 — AI discovery deliverables -->
+    <section class="slide" id="s20" data-title="תוצרי סדנת AI Discovery" data-section="06 · AI Discovery">
       <header class="s-head" data-reveal>
         <div class="eyebrow"><span class="tick"></span><span class="num">06</span> · AI Discovery</div>
         <h2 class="s-title s-title--sm">תוצרי סדנת AI Discovery</h2>
@@ -1303,8 +1392,8 @@
       </div>
     </section>
 
-    <!-- 19 — thanks -->
-    <section class="slide" id="s19" data-title="תודה רבה" data-section="סיום">
+    <!-- 21 — thanks -->
+    <section class="slide" id="s21" data-title="תודה רבה" data-section="סיום">
       <header class="s-head" data-reveal>
         <div class="eyebrow"><span class="tick"></span>SoluGen AI</div>
         <h2 class="s-title">תודה רבה</h2>
@@ -1325,6 +1414,7 @@
           </div>
         </div>
         <a class="thanks-foot" data-reveal href="https://www.solugen.ai" target="_blank" rel="noopener noreferrer">www.solugen.ai</a>
+        <button class="home-btn" type="button" data-act="home" data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7M6 9.5V20h12V9.5"/></svg>חזרה לדף הבית</button>
       </div>
     </section>
 
@@ -1418,7 +1508,7 @@
     navNext.disabled = hudNext.disabled = atEnd;
     // back pill
     while (trail.length && trail[trail.length - 1] === idx) trail.pop();
-    var has = trail.length > 0;
+    var has = trail.length > 0 && !slides[idx].querySelector('.sol-btn');
     backBtn.classList.toggle('off', !has);
     if (has) backTxt.textContent = 'חזרה ל' + titleOf(trail[trail.length - 1]);
     try { history.replaceState(null, '', '#' + (idx + 1)); } catch (e) {}
@@ -1466,6 +1556,8 @@
       else if (a === 'next') next();
       else if (a === 'ov') setOv(ov.hidden);
       else if (a === 'fs') toggleFs();
+      else if (a === 'home'){ trail = []; go(0); }
+      else if (a === 'sol'){ trail = []; go(5); }
       return;
     }
     if (e.target !== deck) return;
